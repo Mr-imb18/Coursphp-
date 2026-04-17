@@ -1,25 +1,34 @@
 <?php
-
-    if(isset($_POST['Envoyer'])){
-        echo"Hello";
+    if(isset($_POST["envoyer"])){
         $nom = $_POST['nom'];
-        echo $nom;
+        echo "Freedom pour " . $nom;
+        if(empty($_POST['nom"]) || empty($_POST[' pseudo"])) {
+             echo "Veuillez remplir tous les champs.";
+        } else {
+            $pseudo = $_POST['pseudo'];
+            echo "Bienvenue, " . $pseudo. "!";
+        }
     }
-
 ?>
 
-‹!DOCTYPE html>
-‹html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
+<meta charset-"UTF-8">
     <title>Document</title>
-    ‹meta name="viewport" content="width=device-width, initíal-scale=1.0"›
-</head>
-‹body>
-    ‹form action="index.php" method="POST">
-    ‹input type="text" name="nom" placeholder="votre nom"›
-    ‹input type="text" name="pseudo" placeholder="votre pseudo">
+</head> 
+<body>
+    <form action="index.php" method="POST">
+        <Label>Nom : </label><br>
+        <input type="text" name="nom"><br>
+        
+        <Label>Pseudo :</label><br>
+        <input type="text" name="pseudo"><br>
+        
+        <input type="submit" name="envoyer" value="Envoyer">
+    
     </form>
-    ‹input type="submit" name="Envoyer" value="Envoyer">
+
+
 </body>
 </html>
